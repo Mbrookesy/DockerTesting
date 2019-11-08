@@ -1,0 +1,7 @@
+sudo apt install -y default jdk
+
+docker build -t java-app .
+
+docker run -d -p 8080:8080 --name=spring java-app
+
+curl localhost:8080
